@@ -11,6 +11,7 @@ module.exports = {
     lightGrey: "#979797",
     sideBarGrey: "#F0F0F3",
     almostWhite: "#F5F5FA",
+    faintGrey: "#E9E9F2"
   },
   gradient: {
     bgGradient:

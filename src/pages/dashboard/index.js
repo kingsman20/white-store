@@ -6,7 +6,17 @@ import {
   MenuOverView,
   UpcomingEvents,
   EventCard,
-  MainView
+  MainView,
+  Navigation,
+  IconWrapper,
+  Counters,
+  CounterGraph,
+  OrdersAndIncome,
+  GraphOrders,
+  Title,
+  Income,
+  OrderGraph,
+  GraphWrapper,
 } from "./styles";
 
 const Dashboard = () => {
@@ -417,9 +427,171 @@ const Dashboard = () => {
       </MenuOverView>
 
       <MainView>
-        <h1>
-          Hello World
-        </h1>
+        <Navigation>
+          <div className="left-section">
+            <IconWrapper>
+              <svg
+                width="12"
+                height="10"
+                viewBox="0 0 12 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 0.5V1.5H12V0.5H0ZM0 4.5V5.5H12V4.5H0ZM0 8.5V9.5H12V8.5H0Z"
+                  fill="#8181A5"
+                />
+              </svg>
+            </IconWrapper>
+
+            <h2 className="nav-title">Download</h2>
+          </div>
+          <div className="right-section">
+            <IconWrapper>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.5 0.5C7.59375 0.5 6.75521 0.729167 5.98438 1.1875C5.22396 1.625 4.625 2.22396 4.1875 2.98438C3.72917 3.75521 3.5 4.59375 3.5 5.5C3.5 6.09375 3.59896 6.66146 3.79688 7.20312C3.99479 7.73438 4.27083 8.21875 4.625 8.65625L0.640625 12.6406L1.35938 13.3594L5.34375 9.375C5.78125 9.72917 6.26562 10.0052 6.79688 10.2031C7.33854 10.401 7.90625 10.5 8.5 10.5C9.40625 10.5 10.2448 10.2708 11.0156 9.8125C11.776 9.375 12.375 8.77604 12.8125 8.01562C13.2708 7.24479 13.5 6.40625 13.5 5.5C13.5 4.59375 13.2708 3.75521 12.8125 2.98438C12.375 2.22396 11.776 1.625 11.0156 1.1875C10.2448 0.729167 9.40625 0.5 8.5 0.5ZM8.5 1.5C9.22917 1.5 9.89583 1.68229 10.5 2.04688C11.1146 2.40104 11.599 2.88542 11.9531 3.5C12.3177 4.10417 12.5 4.77083 12.5 5.5C12.5 6.22917 12.3177 6.90104 11.9531 7.51562C11.599 8.11979 11.1146 8.60417 10.5 8.96875C9.89583 9.32292 9.22917 9.5 8.5 9.5C7.77083 9.5 7.09896 9.32292 6.48438 8.96875C5.88021 8.60417 5.39583 8.11979 5.03125 7.51562C4.67708 6.90104 4.5 6.22917 4.5 5.5C4.5 4.77083 4.67708 4.10417 5.03125 3.5C5.39583 2.88542 5.88021 2.40104 6.48438 2.04688C7.09896 1.68229 7.77083 1.5 8.5 1.5Z"
+                  fill="#8181A5"
+                />
+              </svg>
+            </IconWrapper>
+            <IconWrapper>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7 0.5C5.82292 0.5 4.72917 0.796875 3.71875 1.39062C2.73958 1.96354 1.96354 2.73958 1.39062 3.71875C0.796875 4.72917 0.5 5.82292 0.5 7C0.5 8.17708 0.796875 9.27083 1.39062 10.2812C1.96354 11.2604 2.73958 12.0365 3.71875 12.6094C4.72917 13.2031 5.82292 13.5 7 13.5C8.17708 13.5 9.27083 13.2031 10.2812 12.6094C11.2604 12.0365 12.0365 11.2604 12.6094 10.2812C13.2031 9.27083 13.5 8.17708 13.5 7C13.5 5.82292 13.2031 4.72917 12.6094 3.71875C12.0365 2.73958 11.2604 1.96354 10.2812 1.39062C9.27083 0.796875 8.17708 0.5 7 0.5ZM7 1.5C8 1.5 8.92708 1.75 9.78125 2.25C10.6042 2.73958 11.2604 3.39583 11.75 4.21875C12.25 5.07292 12.5 6 12.5 7C12.5 8 12.25 8.92708 11.75 9.78125C11.2604 10.6042 10.6042 11.2604 9.78125 11.75C8.92708 12.25 8 12.5 7 12.5C6 12.5 5.07292 12.25 4.21875 11.75C3.39583 11.2604 2.73958 10.6042 2.25 9.78125C1.75 8.92708 1.5 8 1.5 7C1.5 6 1.75 5.07292 2.25 4.21875C2.73958 3.39583 3.39583 2.73958 4.21875 2.25C5.07292 1.75 6 1.5 7 1.5ZM6.5 4V6.5H4V7.5H6.5V10H7.5V7.5H10V6.5H7.5V4H6.5Z"
+                  fill="#8181A5"
+                />
+              </svg>
+            </IconWrapper>
+          </div>
+        </Navigation>
+
+        <Counters>
+          <CounterGraph>
+            <div className="stat">
+              <p className="numbers">$1.870</p>
+              <p className="title">Income per lead</p>
+            </div>
+            <div className="graph">
+              <img src={require("../../images/Graph1.png")} alt="graph" />
+            </div>
+          </CounterGraph>
+          <CounterGraph>
+            <div className="stat">
+              <p className="numbers">$1.870</p>
+              <p className="title">New leads</p>
+            </div>
+            <div className="graph">
+              <img src={require("../../images/Graph2.png")} alt="graph" />
+            </div>
+          </CounterGraph>
+          <CounterGraph>
+            <div className="stat">
+              <p className="numbers">15.10%</p>
+              <p className="title">Conversion rate</p>
+            </div>
+            <div className="graph">
+              <img src={require("../../images/Graph3.png")} alt="graph" />
+            </div>
+          </CounterGraph>
+        </Counters>
+
+        <OrdersAndIncome>
+          <GraphOrders>
+            <div className="top">
+              <Title>
+                <p className="name">Orders</p>
+                <div className="tabs">
+                  <p className="day">Day</p>
+                  <p className="week">Week</p>
+                  <p className="month">Month</p>
+                  <IconWrapper>
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.9967 0.5V1.0625H0.746704V13.4375H13.1217V1.0625H10.8717V0.5H9.7467V1.0625H4.1217V0.5H2.9967ZM1.8717 2.1875H2.9967V2.75H4.1217V2.1875H9.7467V2.75H10.8717V2.1875H11.9967V3.3125H1.8717V2.1875ZM1.8717 4.4375H11.9967V12.3125H1.8717V4.4375ZM5.2467 5.5625V6.6875H6.3717V5.5625H5.2467ZM7.4967 5.5625V6.6875H8.6217V5.5625H7.4967ZM9.7467 5.5625V6.6875H10.8717V5.5625H9.7467ZM2.9967 7.8125V8.9375H4.1217V7.8125H2.9967ZM5.2467 7.8125V8.9375H6.3717V7.8125H5.2467ZM7.4967 7.8125V8.9375H8.6217V7.8125H7.4967ZM9.7467 7.8125V8.9375H10.8717V7.8125H9.7467ZM2.9967 10.0625V11.1875H10.8717V10.0625H2.9967Z"
+                        fill="#8181A5"
+                      />
+                    </svg>
+                  </IconWrapper>
+                </div>
+              </Title>
+            </div>
+
+            <OrderGraph>
+              <GraphWrapper>
+                <img
+                  src={require("../../images/Graph.png")}
+                  alt="order-graph"
+                />
+                <div className="months">
+                  <p>Jan</p>
+                  <p>Feb</p>
+                  <p>Mar</p>
+                  <p>Apr</p>
+                  <p>May</p>
+                  <p>Jun</p>
+                  <p>Jul</p>
+                  <p>Aug</p>
+                  <p>Sep</p>
+                  <p>Oct</p>
+                  <p>Nov</p>
+                  <p>Dec</p>
+                </div>
+              </GraphWrapper>
+            </OrderGraph>
+          </GraphOrders>
+
+          <Income>
+            <div className="top">
+              <Title>
+                <p className="name">Planned Income</p>
+                <IconWrapper>
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.9967 0.5V1.0625H0.746704V13.4375H13.1217V1.0625H10.8717V0.5H9.7467V1.0625H4.1217V0.5H2.9967ZM1.8717 2.1875H2.9967V2.75H4.1217V2.1875H9.7467V2.75H10.8717V2.1875H11.9967V3.3125H1.8717V2.1875ZM1.8717 4.4375H11.9967V12.3125H1.8717V4.4375ZM5.2467 5.5625V6.6875H6.3717V5.5625H5.2467ZM7.4967 5.5625V6.6875H8.6217V5.5625H7.4967ZM9.7467 5.5625V6.6875H10.8717V5.5625H9.7467ZM2.9967 7.8125V8.9375H4.1217V7.8125H2.9967ZM5.2467 7.8125V8.9375H6.3717V7.8125H5.2467ZM7.4967 7.8125V8.9375H8.6217V7.8125H7.4967ZM9.7467 7.8125V8.9375H10.8717V7.8125H9.7467ZM2.9967 10.0625V11.1875H10.8717V10.0625H2.9967Z"
+                      fill="#8181A5"
+                    />
+                  </svg>
+                </IconWrapper>
+              </Title>
+            </div>
+            <GraphWrapper>
+              <img src={require("../../images/Graph4.png")} alt="order-graph" />
+              <div className="months">
+                <p>Jan</p>
+                <p>Feb</p>
+                <p>Mar</p>
+                <p>Apr</p>
+                <p>May</p>
+                <p>Jun</p>
+              </div>
+            </GraphWrapper>
+          </Income>
+        </OrdersAndIncome>
       </MainView>
     </Container>
   );
