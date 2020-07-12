@@ -8,6 +8,9 @@ module.exports = {
     lineColor: "#F0F0F3",
     white: "#fff",
     iconBorderColor: "#ECECF2",
+    lightGrey: "#979797",
+    sideBarGrey: "#F0F0F3",
+    almostWhite: "#F5F5FA",
   },
   gradient: {
     bgGradient:
