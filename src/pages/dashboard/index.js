@@ -235,6 +235,7 @@ const Dashboard = () => {
         <div className="iconWrapper">
           <img alt="user-profile" src={require("../../images/Img.png")} />
         </div>
+
       </Sidebar>
 
       <MenuOverView>
@@ -433,7 +434,7 @@ const Dashboard = () => {
       <MainView>
         <Navigation>
           <div className="left-section">
-            <IconWrapper>
+            <IconWrapper className="hide-on-mobile">
               <svg
                 width="12"
                 height="10"
@@ -492,7 +493,7 @@ const Dashboard = () => {
               <img src={require("../../images/Graph1.png")} alt="graph" />
             </div>
           </CounterGraph>
-          <CounterGraph>
+          <CounterGraph className="hide-on-mobile">
             <div className="stat">
               <p className="numbers">$1.870</p>
               <p className="title">New leads</p>
@@ -501,7 +502,7 @@ const Dashboard = () => {
               <img src={require("../../images/Graph2.png")} alt="graph" />
             </div>
           </CounterGraph>
-          <CounterGraph>
+          <CounterGraph className="hide-on-mobile">
             <div className="stat">
               <p className="numbers">15.10%</p>
               <p className="title">Conversion rate</p>
@@ -540,14 +541,15 @@ const Dashboard = () => {
             </div>
 
             <OrderGraph>
+              {/* Hide this graph on mobile */}
               <GraphWrapper>
-                <div className="graphWrapper">
+                <div className="graphWrapper hide-on-mobile">
                   <img
                     src={require("../../images/Graph6.png")}
                     alt="order-graph"
                   />
                 </div>
-                <div className="months">
+                <div className="months ">
                   <p>Jan</p>
                   <p>Feb</p>
                   <p>Mar</p>
@@ -560,6 +562,23 @@ const Dashboard = () => {
                   <p>Oct</p>
                   <p>Nov</p>
                   <p>Dec</p>
+                </div>
+              </GraphWrapper>
+
+              <GraphWrapper>
+                <div className="mobile-graphWrapper">
+                  <img
+                    src={require("../../images/GraphMobile.png")}
+                    alt="order-graph"
+                  />
+                </div>
+                <div className="mobile-months">
+                  <p>Apr</p>
+                  <p>May</p>
+                  <p>Jun</p>
+                  <p>Jul</p>
+                  <p>Aug</p>
+                  <p>Sep</p>
                 </div>
               </GraphWrapper>
             </OrderGraph>

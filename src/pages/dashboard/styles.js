@@ -3,9 +3,17 @@ import { colors, gradient } from "../../styles/theme";
 
 const Container = styled.div`
   display: flex;
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+  }
 `;
 
 const Sidebar = styled.div`
+  @media (max-width: 375px) {
+    display: none;
+  }
+
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -36,6 +44,10 @@ const Sidebar = styled.div`
 `;
 
 const MenuOverView = styled.div`
+  @media (max-width: 375px) {
+    display: none;
+  }
+
   background: ${colors.white};
   padding-top: 5.25rem;
   padding-left: 1.75rem;
@@ -179,12 +191,26 @@ const EventCard = styled.div`
 `;
 
 const MainView = styled.main`
+  @media (max-width: 375px) {
+    padding: 0 14px;
+  }
+
   background: ${gradient.bgGradient};
   width: 1200px;
   padding: 0 27px;
 `;
 
 const Navigation = styled.nav`
+  position: relative;
+
+  @media (max-width: 375px) {
+    display: grid;
+
+    .hide-on-mobile {
+      display: none;
+    }
+  }
+
   padding: 1.5rem 0 1.5rem 0;
   display: flex;
   align-items: space-between;
@@ -201,14 +227,23 @@ const Navigation = styled.nav`
     font-weight: 700;
     color: ${colors.dark};
     margin-left: 20px;
-  }
 
-  .left-section {
+    @media (max-width: 375px) {
+      margin: 0;
+      position: absolute;
+      top: 30px;
+    }
   }
 
   .right-section {
     & :not(:last-child) {
       margin-right: 10px;
+    }
+
+    @media (max-width: 375px) {
+      width: 350px;
+      display: flex;
+      justify-content: space-between;
     }
   }
 `;
@@ -223,11 +258,21 @@ const IconWrapper = styled.div`
 `;
 
 const Counters = styled.div`
+  @media (max-width: 375px) {
+    .hide-on-mobile {
+      display: none;
+    }
+  }
+
   display: flex;
   justify-content: space-between;
 `;
 
 const CounterGraph = styled.div`
+  @media (max-width: 375px) {
+    width: 348px;
+  }
+
   width: 355px;
   height: 100%;
   display: flex;
@@ -256,17 +301,25 @@ const CounterGraph = styled.div`
 `;
 
 const OrdersAndIncome = styled.div`
+  @media (max-width: 375px) {
+    position: relative;
+    margin-top: 60px;
+    grid-template-columns: 1fr;
+  }
+
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 30px;
   margin-top: 28px;
-
-  .top {
-    /* width: 100%; */
-  }
 `;
 
 const GraphOrders = styled.div`
+  @media (max-width: 375px) {
+    /* grid-template-columns: 1fr; */
+    max-width: 350px;
+  }
+
+  position: relative;
   background: ${colors.white};
   border-radius: 10px;
   padding-top: 5px;
@@ -283,9 +336,20 @@ const Title = styled.div`
     font-size: 18px;
     font-weight: 700;
     color: ${colors.dark};
+
+    @media (max-width: 375px) {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      margin: 0;
+    }
   }
 
   .tabs {
+    @media (max-width: 375px) {
+      width: 300px;
+    }
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -317,7 +381,29 @@ const OrderGraph = styled.div`
 `;
 
 const GraphWrapper = styled.div`
+  @media (max-width: 375px) {
+    width: 350px;
+
+    .hide-on-mobile {
+      display: none;
+    }
+  }
+
   .graphWrapper {
+    height: 240px;
+
+    img {
+      max-width: 100%;
+      height: 240px;
+    }
+  }
+
+  .mobile-graphWrapper {
+    @media (max-width: 375px) {
+      display: block;
+    }
+
+    display: none;
     height: 240px;
 
     img {
@@ -330,6 +416,20 @@ const GraphWrapper = styled.div`
     margin: 10px 24px;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 375px) {
+      display: none;
+    }
+  }
+
+  .mobile-months {
+    @media (max-width: 375px) {
+      display: flex;
+    }
+
+    display: none;
+    margin: 10px 24px;
+    justify-content: space-between;
   }
 `;
 
@@ -337,9 +437,24 @@ const Income = styled.div`
   background: ${colors.white};
   border-radius: 10px;
   padding-top: 12px;
+
+  @media (max-width: 375px) {
+    max-width: 350px;
+    margin-top: 30px;
+  }
+
+  .name {
+    top: 400px;
+  }
 `;
 
 const LatestSales = styled.div`
+  @media (max-width: 375px) {
+    margin-top: 60px;
+    display: none;
+  }
+
+  position: relative;
   margin: 28px 0;
   border-radius: 10px;
   background: ${colors.white};
@@ -451,8 +566,8 @@ const Status = styled.div`
   /* padding: 5px  24px; */
   background: ${({ type }) =>
     type === "shipped"
-    ? gradient.shippedGradient
-    : gradient.processingGradient};
+      ? gradient.shippedGradient
+      : gradient.processingGradient};
 
   p {
     color: ${({ type }) => (type === "shipped" ? "#8AF1B9" : "#F4BE5E")};
@@ -481,5 +596,5 @@ export {
   LatestSales,
   TableTitle,
   SalesItem,
-  Status
+  Status,
 };

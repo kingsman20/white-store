@@ -146,7 +146,7 @@ const Auth = () => {
 
               <div className="bottom">
                 <Button type="signin">
-                  <Link to="/dashboard">Sign In</Link>
+                  <Link to="dashboard">Sign In</Link>
                 </Button>
                 <Button type="signup">
                   <Link to="/">Sign Up</Link>
