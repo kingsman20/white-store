@@ -17,6 +17,8 @@ import {
   Income,
   OrderGraph,
   GraphWrapper,
+  LatestSales,
+  TableTitle,
 } from "./styles";
 
 const Dashboard = () => {
@@ -537,10 +539,12 @@ const Dashboard = () => {
 
             <OrderGraph>
               <GraphWrapper>
-                <img
-                  src={require("../../images/Graph.png")}
-                  alt="order-graph"
-                />
+                <div className="graphWrapper">
+                  <img
+                    src={require("../../images/Graph6.png")}
+                    alt="order-graph"
+                  />
+                </div>
                 <div className="months">
                   <p>Jan</p>
                   <p>Feb</p>
@@ -580,7 +584,12 @@ const Dashboard = () => {
               </Title>
             </div>
             <GraphWrapper>
-              <img src={require("../../images/Graph4.png")} alt="order-graph" />
+              <div className="graphWrapper">
+                <img
+                  src={require("../../images/Graph7.png")}
+                  alt="order-graph"
+                />
+              </div>
               <div className="months">
                 <p>Jan</p>
                 <p>Feb</p>
@@ -592,6 +601,40 @@ const Dashboard = () => {
             </GraphWrapper>
           </Income>
         </OrdersAndIncome>
+
+        <LatestSales>
+          <Title>
+            <p className="name">Latest Sales</p>
+            <div className="tabs">
+              <p className="day">Day</p>
+              <p className="week">Week</p>
+              <p className="month">Month</p>
+              <IconWrapper>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.9967 0.5V1.0625H0.746704V13.4375H13.1217V1.0625H10.8717V0.5H9.7467V1.0625H4.1217V0.5H2.9967ZM1.8717 2.1875H2.9967V2.75H4.1217V2.1875H9.7467V2.75H10.8717V2.1875H11.9967V3.3125H1.8717V2.1875ZM1.8717 4.4375H11.9967V12.3125H1.8717V4.4375ZM5.2467 5.5625V6.6875H6.3717V5.5625H5.2467ZM7.4967 5.5625V6.6875H8.6217V5.5625H7.4967ZM9.7467 5.5625V6.6875H10.8717V5.5625H9.7467ZM2.9967 7.8125V8.9375H4.1217V7.8125H2.9967ZM5.2467 7.8125V8.9375H6.3717V7.8125H5.2467ZM7.4967 7.8125V8.9375H8.6217V7.8125H7.4967ZM9.7467 7.8125V8.9375H10.8717V7.8125H9.7467ZM2.9967 10.0625V11.1875H10.8717V10.0625H2.9967Z"
+                    fill="#8181A5"
+                  />
+                </svg>
+              </IconWrapper>
+            </div>
+          </Title>
+
+          <TableTitle>
+            <p className="name">Product</p>
+            <p className="name">Customer</p>
+            <p className="name">Delivery</p>
+            <p className="name">Shipping</p>
+            <p className="name">Total</p>
+            <p className="name">Status</p>
+          </TableTitle>
+        </LatestSales>
       </MainView>
     </Container>
   );

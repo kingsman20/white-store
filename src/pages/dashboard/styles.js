@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors, gradient } from "../../styles/theme";
 
 const Container = styled.div`
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
 `;
 
@@ -24,7 +24,7 @@ const Sidebar = styled.div`
     width: 3rem;
     height: 3rem;
     border-radius: 4px;
-    transition: background 300ms ease-in-out;
+    transition: background 400ms ease-in-out;
 
     &:nth-child(2) {
       background: ${gradient.bgGradient};
@@ -229,7 +229,7 @@ const Counters = styled.div`
 `;
 
 const CounterGraph = styled.div`
-  width: 360px;
+  width: 355px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -259,18 +259,18 @@ const CounterGraph = styled.div`
 const OrdersAndIncome = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 30px;
   margin-top: 28px;
 
   .top {
-    width: 100%;
+    /* width: 100%; */
   }
 `;
 
 const GraphOrders = styled.div`
   background: ${colors.white};
   border-radius: 10px;
-  padding-top: 12px;
+  padding-top: 5px;
 `;
 
 const Title = styled.div`
@@ -294,24 +294,18 @@ const Title = styled.div`
     font-weight: bold;
     font-size: 14px;
 
-    & > * {
-      margin-right: 10px;
-    }
-    
-    &:last-child {
-      margin-right: 0;
-    }
-
     .day {
       padding: 11px;
       color: ${colors.dark};
       font-weight: 700;
       border: 1px solid ${colors.iconBorderColor};
       border-radius: 8px;
+      margin-right: 10px;
     }
 
     .week {
       padding: 11px;
+      margin-right: 10px;
     }
     .month {
       padding: 11px;
@@ -325,14 +319,19 @@ const OrderGraph = styled.div`
 
 const GraphWrapper = styled.div`
   .graphWrapper {
-    width: 100%;
+    height: 240px;
+
+    img {
+      max-width: 100%;
+      height: 240px;
+    }
   }
 
   .months {
     margin: 10px 24px;
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid ${colors.lineColor}
+    /* border-top: 1px solid ${colors.lineColor}; */
   }
 `;
 
@@ -340,7 +339,26 @@ const Income = styled.div`
   background: ${colors.white};
   border-radius: 10px;
   padding-top: 12px;
+`;
 
+const LatestSales = styled.div`
+  margin-top: 28px;
+  border-radius: 10px;
+  background: ${colors.white};
+  border: 1px solid ${colors.lineColor};
+`;
+
+const TableTitle = styled.div`
+  background: rgba(245, 245, 250, 0.4);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  color: ${colors.primaryLight};
+  padding: 0.4rem 26px;
+
+  .name {
+  }
 `;
 
 export {
@@ -360,5 +378,7 @@ export {
   Title,
   Income,
   OrderGraph,
-  GraphWrapper
+  GraphWrapper,
+  LatestSales,
+  TableTitle,
 };
