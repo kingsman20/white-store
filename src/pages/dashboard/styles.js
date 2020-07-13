@@ -356,12 +356,24 @@ const TableTitle = styled.div`
   padding: 0.4rem 26px;
 
   .name {
+    flex-basis: 6rem;
+  }
+
+  .customer {
+    flex-basis: 6rem;
+  }
+
+  .delivery {
+    flex-basis: 10rem;
+  }
+
+  .total {
+    flex-basis: auto;
   }
 `;
 
 const SalesItem = styled.div`
   display: flex;
-  /* grid-template-columns: 1fr 1.5fr 1.5fr 1fr 0.5fr 0.5fr; */
   align-items: center;
   justify-content: space-between;
   margin: 18px 0 23px 0;
@@ -413,8 +425,7 @@ const SalesItem = styled.div`
   }
 
   .customer {
-    /* display: grid; */
-    /* align-items: center; */
+    flex-basis: 10rem;
 
     .name {
       font-weight: 700;

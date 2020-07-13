@@ -630,11 +630,11 @@ const Dashboard = () => {
 
           <TableTitle>
             <p className="name">Product</p>
-            <p className="name">Customer</p>
-            <p className="name">Delivery</p>
-            <p className="name">Shipping</p>
-            <p className="name">Total</p>
-            <p className="name">Status</p>
+            <p className="customer">Customer</p>
+            <p className="delivery">Delivery</p>
+            <p className="shipping">Shipping</p>
+            <p className="total">Total</p>
+            <p className="status6">Status</p>
           </TableTitle>
 
           <SalesItem>
