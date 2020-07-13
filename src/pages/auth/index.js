@@ -145,8 +145,12 @@ const Auth = () => {
               </div>
 
               <div className="bottom">
-                <Button type="signin">Sign In</Button>
-                <Button type="signup">Sign Up</Button>
+                <Button type="signin">
+                  <Link to="dashboard">Sign In</Link>
+                </Button>
+                <Button type="signup">
+                  <Link to="/">Sign Up</Link>
+                </Button>
               </div>
             </BottomFormGroup>
           </StyledForm>

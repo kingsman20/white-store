@@ -150,8 +150,8 @@ const FormGroup = styled.div`
     right: 0;
   }
 
-  @media(max-width: 375px) {
-  margin-top: 1.5rem;
+  @media (max-width: 375px) {
+    margin-top: 1.5rem;
 
     .fullname {
       display: block;
@@ -206,9 +206,13 @@ const Button = styled.div`
   border-radius: 8px;
   background: ${({ type }) =>
     type === "signin" ? colors.buttonColor : gradient.bgGradient};
-  color: ${({ type }) => (type === "signin" ? colors.white : colors.primary)};
   cursor: pointer;
   transition: all 300ms ease-in-out;
+
+  a {
+    text-decoration: none;
+    color: ${({ type }) => (type === "signin" ? colors.white : colors.primary)};
+  }
 
   &:hover {
     box-shadow: 0 3px 15px rgba(94, 129, 244, 0.1);
@@ -254,8 +258,6 @@ const SocialLogin = styled.div`
 
     .siginText {
       grid-row: 1 / 2;
-      /* color: ${colors.primaryLight}; */
-      /* margin-left: 13px; */
     }
   }
 `;
