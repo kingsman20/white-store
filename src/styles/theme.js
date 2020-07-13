@@ -16,5 +16,7 @@ module.exports = {
   gradient: {
     bgGradient:
       "linear-gradient(0deg, rgba(94, 129, 244, 0.1), rgba(94, 129, 244, 0.1)), #FFFFFF",
+    shippedGradient: "linear-gradient(0deg, rgba(124, 231, 172, 0.1), rgba(124, 231, 172, 0.1)), #FFFFFF",
+    processingGradient: "linear-gradient(0deg, rgba(244, 190, 94, 0.1), rgba(244, 190, 94, 0.1)), #FFFFFF"
   },
 };

@@ -19,6 +19,8 @@ import {
   GraphWrapper,
   LatestSales,
   TableTitle,
+  SalesItem,
+  Status,
 } from "./styles";
 
 const Dashboard = () => {
@@ -634,6 +636,106 @@ const Dashboard = () => {
             <p className="name">Total</p>
             <p className="name">Status</p>
           </TableTitle>
+
+          <SalesItem>
+            <div className="product">
+              <div className="productImage">
+                <img src={require("../../images/Img1.png")} alt="product"/>
+              </div>
+              <div className="productName">
+                <p className="name">Macbook Pro</p>
+                <p className="id">ID 10-3290-08</p>
+              </div>
+            </div>
+
+            <div className="customer">
+              <p className="name">Rodney Cannon</p>
+              <p className="email">rodney.cannon@gmail.com</p>
+            </div>
+
+            <div className="delivery">
+              <p className="country">United Kingdom</p>
+              <p className="address">193 Cole Plains Suite 649, 891203</p>
+            </div>
+
+            <div className="shippingPrice">
+              <p>$18.00</p>
+            </div>
+
+            <div className="total">
+              <p>$118.00</p>
+            </div>
+
+            <Status type="shipped">
+              <p>Shipped</p>
+            </Status>
+          </SalesItem>
+          <SalesItem>
+            <div className="product">
+              <div className="productImage">
+                <img src={require("../../images/Img2.png")} alt="product"/>
+              </div>
+              <div className="productName">
+                <p className="name">Dell Laptop</p>
+                <p className="id">ID 10-3456-18</p>
+              </div>
+            </div>
+
+            <div className="customer">
+              <p className="name">Mike Franklin</p>
+              <p className="email">mike.franklin@gmail.com</p>
+            </div>
+
+            <div className="delivery">
+              <p className="country">United States</p>
+              <p className="address">619 Jeffrey Freeway Apt. 273</p>
+            </div>
+
+            <div className="shippingPrice">
+              <p>$28.00</p>
+            </div>
+
+            <div className="total">
+              <p>$208.00</p>
+            </div>
+
+            <Status type="processing">
+              <p>Processing</p>
+            </Status>
+          </SalesItem>
+          <SalesItem>
+            <div className="product">
+              <div className="productImage">
+                <img src={require("../../images/Img3.png")} alt="product"/>
+              </div>
+              <div className="productName">
+                <p className="name">Macbook Air</p>
+                <p className="id">ID 10-3786-23</p>
+              </div>
+            </div>
+
+            <div className="customer">
+              <p className="name">Louis Franklin</p>
+              <p className="email">louis.franklin@gmail.com</p>
+            </div>
+
+            <div className="delivery">
+              <p className="country">Germany</p>
+              <p className="address">200 Davis Estates Suite 621</p>
+            </div>
+
+            <div className="shippingPrice">
+              <p>$18.00</p>
+            </div>
+
+            <div className="total">
+              <p>$118.00</p>
+            </div>
+
+            <Status type="processing">
+              <p>Processing</p>
+            </Status>
+          </SalesItem>
         </LatestSales>
       </MainView>
     </Container>

@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { colors, gradient } from "../../styles/theme";
 
 const Container = styled.div`
-  /* height: 100vh; */
   display: flex;
 `;
 
@@ -331,7 +330,6 @@ const GraphWrapper = styled.div`
     margin: 10px 24px;
     display: flex;
     justify-content: space-between;
-    /* border-top: 1px solid ${colors.lineColor}; */
   }
 `;
 
@@ -342,7 +340,7 @@ const Income = styled.div`
 `;
 
 const LatestSales = styled.div`
-  margin-top: 28px;
+  margin: 28px 0;
   border-radius: 10px;
   background: ${colors.white};
   border: 1px solid ${colors.lineColor};
@@ -358,6 +356,96 @@ const TableTitle = styled.div`
   padding: 0.4rem 26px;
 
   .name {
+  }
+`;
+
+const SalesItem = styled.div`
+  display: flex;
+  /* grid-template-columns: 1fr 1.5fr 1.5fr 1fr 0.5fr 0.5fr; */
+  align-items: center;
+  justify-content: space-between;
+  margin: 18px 0 23px 0;
+  padding: 0 25px;
+  color: ${colors.dark};
+
+  p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  .product {
+    display: flex;
+    align-items: center;
+
+    .productImage {
+      width: 52px;
+      height: 52px;
+      border-radius: 8px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .productName {
+      display: grid;
+      margin-left: 10px;
+
+      .name {
+        font-weight: 700;
+      }
+
+      .id {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .delivery {
+    flex-basis: 14rem;
+    justify-self: flex-start;
+
+    .country {
+      font-weight: 700;
+    }
+    .address {
+    }
+  }
+
+  .customer {
+    /* display: grid; */
+    /* align-items: center; */
+
+    .name {
+      font-weight: 700;
+    }
+    .email {
+    }
+  }
+
+  .shippingPrice {
+    font-weight: 700;
+  }
+  .total {
+    font-weight: 700;
+  }
+`;
+
+const Status = styled.div`
+  width: 100px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  /* padding: 5px  24px; */
+  background: ${({ type }) =>
+    type === "shipped"
+    ? gradient.shippedGradient
+    : gradient.processingGradient};
+
+  p {
+    color: ${({ type }) => (type === "shipped" ? "#8AF1B9" : "#F4BE5E")};
+    font-weight: 700;
   }
 `;
 
@@ -381,4 +469,6 @@ export {
   GraphWrapper,
   LatestSales,
   TableTitle,
+  SalesItem,
+  Status
 };
